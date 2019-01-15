@@ -84,8 +84,6 @@ Plug 'scrooloose/nerdtree'
 " 状态栏 --- airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" 自动补全 --- YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
 " 代码检测，以及格式化
 Plug 'w0rp/ale'
 " 自动括号
@@ -129,34 +127,6 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
 " 状态配置 --- vim-airline-colorthemes
 let g:airline_theme='simple'
-" ===============================================================
-" 自动补全 --- YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-autocmd Filetype python,c,cpp,Java,vim nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
-let g:ycm_key_invoke_completion = '<c-z>'
-let g:ycm_min_num_of_chars_for_completion=2
-let g:ycm_semantic_triggers =  {
-			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
-set completeopt=menu,menuone
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_python_binary_path = 'python'
-let g:ycm_register_as_syntastic_checker = 0
-let g:ycm_max_num_candidates = 30
-let g:ycm_complete_in_strings=1
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_filetype_whitelist = {
-			\ "c":1,
-			\ "cpp":1,
-			\ "objc":1,
-			\ "python": 1,
-			\ "Java": 1,
-			\ "sh":1,
-			\ "zsh":1,
-			\ "zimbu":1,
-			\ "vim":1,
-			\ }
 " ========================================================================
 " 代码格式化F6 --- vim-autoformat
 nnoremap <F6> :Autoformat<CR>
