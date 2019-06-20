@@ -3,7 +3,7 @@
 " 开启24bit颜色
 " 配色主题
 set termguicolors
-colorscheme solarized
+colorscheme onedark
 "colorscheme molokai
 "colorscheme PaperColor
 set background=dark
